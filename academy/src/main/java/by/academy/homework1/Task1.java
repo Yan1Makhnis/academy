@@ -11,7 +11,7 @@ public class Task1 {
 			System.out.println("Введите сумму покупок (рублей)");
 			while (!sc.hasNextInt()) {
 				System.out.println("Необходимо ввести число!");
-				sc.next(); //
+				sc.next(); 
 			}
 			sum = sc.nextInt();
 		} while (sum <= 0);
@@ -29,20 +29,19 @@ public class Task1 {
 		} while (age <= 0);
 		System.out.println("Возраст покупателя = " + age);
 		System.out.println();
-
+		sc.close();
 		if (sum >= 400) {
-			System.out.println("Размер скидки - 20%. Сумма к оплате:"+(sum-sum*0.2));
-		}
-		if (sum >= 300 && sum < 400) {
-			System.out.println("Размер скидки - 15%. Сумма к оплате:"+(sum-sum*0.15));
+			System.out.println("Размер скидки - 20%. Финальная сумма к оплате (рублей):"+(sum-sum*0.2));
+		} else if(sum >= 300 && sum < 400) {
+			System.out.println("Размер скидки - 15%. Финальная сумма к оплате(рублей):"+(sum-sum*0.15));
 		} else if (sum >= 200 && sum < 300 && age >= 18) {
-			System.out.println("Размер скидки составит 16%");
+			System.out.println("Размер скидки - 16%. Финальная сумма к оплате(рублей):"+(sum-sum*0.16));
 		} else if (sum >= 200 && sum < 300 && age < 18) {
-			System.out.println("Размер скидки составит 8%");
+			System.out.println("Размер скидки - 8%. Финальная сумма к оплате(рублей):"+(sum-sum*0.08));
 		} else if (sum >= 100 && sum < 200) {
-			System.out.println("Размер скидки составит 7%");
+			System.out.println("Размер скидки - 7%. Финальная сумма к оплате(рублей):"+(sum-sum*0.07));
 		} else if (sum > 100) {
-			System.out.println("Размер скидки составит 5%");
+			System.out.println("Размер скидки - 15%. Финальная сумма к оплате(рублей):"+(sum-sum*0.15));
 		}
 	}
 }
